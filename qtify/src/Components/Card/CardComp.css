@@ -1,0 +1,10 @@
+.follow-count{
+    background-color: var(--color-black);
+    color: white;
+    font-size: x-small;
+    height: 18px;
+    border-radius: 5px;
+    font-family: inherit;
+    padding: 0px 3px;
+    /* font: inherit; */
+}

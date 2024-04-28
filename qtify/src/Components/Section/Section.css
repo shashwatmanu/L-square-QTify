@@ -1,0 +1,10 @@
+.grid{
+    display: flex;
+    flex-direction: row;
+}
+button{
+    color: var(--color-primary);
+    background: none;
+    font-family: inherit;
+    border: none;
+}
