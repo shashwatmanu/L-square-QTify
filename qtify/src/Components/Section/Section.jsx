@@ -14,7 +14,7 @@ const Section = ({albumData, sectionName}) => {
   return (<>
    <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginLeft: '32px', marginRight: '30px', marginBottom: '12px'}}>
 <Box sx={{color: 'white'}}>{sectionName}</Box>
-<Box><button>Collapse</button></Box>
+<Box><button className='button'>Collapse</button></Box>
    </Box>
   <Box sx={{marginLeft: '32px', marginRight: '32px', marginBottom: '32px'}}>
     <Grid container spacing={4}>
