@@ -22,11 +22,14 @@ const [newAlbums, setNewAlbums] = useState([])
   }
 
   const fetchSongs = async() =>{
-    let res = await axios.get('https://qtify-backend-labs.crio.do/albums/top');
+    let res = await axios.get('https://qtify-backend-labs.crio.do/songs');
+  
+
   }
   useEffect(()=>{
     fetchTopAlbums();
     fetchNewAlbums();
+    fetchSongs();
   },[])
 
 

@@ -24,7 +24,7 @@ const CardComponent = ({img, follows, albumName}) => {
 
         />
         <Box sx={{display: 'flex', height:'24px', alignItems:'center', paddingLeft:'5px'}}>
-          <Chip label={follows + " Follows"} className='follow-count'></Chip> 
+          <Chip label={follows + " Follows"} style={{backgroundColor: 'black', color: 'white', fontFamily:'inherit',height:'18px',borderRadius:'5px'}}></Chip> 
           </Box>
     
     </Card>
