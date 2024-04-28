@@ -1,0 +1,51 @@
+
+.carousel{
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    
+}
+.swiper-slide {
+    width: auto;
+}
+/* .swiper-button-next {
+    content: url(../../Assets/NextButton.png);
+    height: 32px;
+    width: 32px;
+  }
+  
+  .swiper-button-prev {
+    content: url(../../Assets/BackButton.png);
+    height: 32px;
+    width: 32px;
+
+  } */
+  /* .next{
+    content: url(../../Assets/NextButton.png);
+    background-color: transparent;
+  }
+  .prev{
+    content: url(../../Assets/BackButton.png);
+    background-color: transparent;
+  } */
+  .swiper-button-prev {
+    background-image: url(../../Assets/BackButton.png) !important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    }
+    
+    .swiper-button-next {
+    background-image: url(../../Assets/NextButton.png) !important;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    }
+    
+    .swiper-button-next::after {
+    display: none;
+    }
+    
+    .swiper-button-prev::after {
+    display: none;
+    }
