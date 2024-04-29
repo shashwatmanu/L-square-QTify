@@ -13,7 +13,7 @@ import axios from "axios";
 
 const Section = ({albumData, sectionName, isSongs, genres}) => {
   const [showAll, setShowAll] = useState(false);
-  const [value, setValue] = React.useState('1');
+  const [value, setValue] = React.useState('all');
 //  if(isSongs){console.log(albumData)}
 
 let filteredAlbums = [];
@@ -78,7 +78,7 @@ console.log(filteredAlbums);
 
   const tabs = (<Box sx={{ width: '100%', bgcolor: 'inherit', marginBottom: '24px', marginLeft: '32px'}}>
   <StyledTabs value={value} onChange={handleChange} indicatorColor='secondary'>
-  <StyledTab label="All" value={1}/>
+  <StyledTab label="All" value="all"/>
     {genres?(genres.map((genre)=><StyledTab label={genre.label} value={genre.label}/>)):("")}
     
   </StyledTabs>
@@ -101,7 +101,7 @@ console.log(filteredAlbums);
       {gridLayout}
       </Grid>
       </Box>
-      <hr/></>):(<Carousel data={(value!==1&&isSongs===true)?filteredAlbums:albumData} isSongs={isSongs}/>)}
+      <hr/></>):(<Carousel data={(value!=="all"&&isSongs===true)?filteredAlbums:albumData} isSongs={isSongs}/>)}
       {(isSongs)?<hr/>:""}
     </>
   )
