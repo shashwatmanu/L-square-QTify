@@ -10,7 +10,7 @@ import { useRef } from 'react';
 import nextImage from "../../Assets/NextButton.png"
 import prevImage from "../../Assets/BackButton.png"
 
-const Carousel = ({data}) => {
+const Carousel = ({data, isSongs}) => {
     const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -34,7 +34,7 @@ const Carousel = ({data}) => {
         
         {data.map((album)=>{ return(
             <SwiperSlide className='swiper-slide'>
-            <Card img={album.image} follows={album.follows} albumName={album.title}  key={album.id}/>
+            <Card img={album.image} follows={album.follows} albumName={album.title}  key={album.id} isSongs={isSongs} likes={album.likes}/>
             </SwiperSlide>)
         })}
         
