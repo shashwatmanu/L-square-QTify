@@ -5,14 +5,18 @@ import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
+import Tooltip from '@mui/material/Tooltip';
 
 import "./CardComp.css"
 import { Stack } from '@mui/material';
 
-const CardComponent = ({img, follows, albumName, likes, isSongs}) => {
+const CardComponent = ({title, img, follows, albumName, likes, isSongs}) => {
+  // let some = {...songs};
+  console.log(title)
+  console.log(albumName)
   return (
     <>
-    
+    <Tooltip title="check" placement='top' arrow>
      <Card sx={{ width: 159, maxHeight: 205, borderRadius: '7px' }}>
       
         <CardMedia
@@ -29,7 +33,7 @@ const CardComponent = ({img, follows, albumName, likes, isSongs}) => {
     
     </Card>
     <Box sx={{color: 'white', size: '14px', lineHeight: '21px',maxWidth: 159}}>{albumName}</Box>
-    
+    </Tooltip>
     </>
   )
 }

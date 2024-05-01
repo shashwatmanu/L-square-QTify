@@ -10,11 +10,13 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { styled } from '@mui/material/styles';
 import axios from "axios"; 
+import Tooltip from '@mui/material/Tooltip';
 
 const Section = ({albumData, sectionName, isSongs, genres}) => {
   const [showAll, setShowAll] = useState(false);
   const [value, setValue] = React.useState('all');
-//  if(isSongs){console.log(albumData)}
+//  if(!isSongs){console.log(albumData[0].songs.length)}
+
 
 let filteredAlbums = [];
 if(isSongs){
@@ -27,7 +29,7 @@ if(isSongs){
     }
   }
 }
-console.log(filteredAlbums);
+// console.log(filteredAlbums);
   
 
 
@@ -71,8 +73,12 @@ console.log(filteredAlbums);
   };
   
   const gridLayout = albumData.map((album)=>
+  
+    
   <Grid item>
-    <Card img={album.image} follows={album.follows} albumName={album.title} key={album.id} likes={null}/>
+    <Card title ={album.title} img={album.image} follows={album.follows} albumName={album.title} key={album.id} likes={null}/>
+    
+  
     </Grid>
   )
 
@@ -90,7 +96,9 @@ console.log(filteredAlbums);
 
   return (<>
    <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginLeft: '32px', marginRight: '30px', marginBottom: '12px'}}>
+
 <Box sx={{color: 'white'}}>{sectionName}</Box>
+
 
 {isSongs?"":(<Box sx={{marginBottom:'10px'}}><button className='button' onClick={handleClick}>{showAll?"Collapse":"Show all"}</button></Box>)}
    </Box>

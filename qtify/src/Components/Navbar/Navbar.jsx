@@ -5,6 +5,8 @@ import SearchBox from "../Search/SearchBox"
 import styles from "./Navbar.module.css";
 
 
+
+
 const Navbar = () =>{
     return (<>
     <nav className={styles.navbar}>
