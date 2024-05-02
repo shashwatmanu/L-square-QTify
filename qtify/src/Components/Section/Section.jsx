@@ -76,7 +76,7 @@ if(isSongs){
   
     
   <Grid item>
-    <Card title ={album.title} img={album.image} follows={album.follows} albumName={album.title} key={album.id} likes={null}/>
+    <Card songs ={album.songs} img={album.image} follows={album.follows} albumName={album.title} key={album.id} likes={null}/>
     
   
     </Grid>
@@ -109,7 +109,7 @@ if(isSongs){
       {gridLayout}
       </Grid>
       </Box>
-      <hr/></>):(<Carousel data={(value!=="all"&&isSongs===true)?filteredAlbums:albumData} isSongs={isSongs}/>)}
+      <hr/></>):(<Carousel data={(value!=="all"&&isSongs===true)?filteredAlbums:albumData} isSongs={isSongs} songs ={albumData} />)}
       {(isSongs)?<hr/>:""}
     </>
   )

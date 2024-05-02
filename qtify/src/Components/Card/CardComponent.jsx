@@ -10,13 +10,16 @@ import Tooltip from '@mui/material/Tooltip';
 import "./CardComp.css"
 import { Stack } from '@mui/material';
 
-const CardComponent = ({title, img, follows, albumName, likes, isSongs}) => {
+const CardComponent = ({songs, img, follows, albumName, likes, isSongs}) => {
   // let some = {...songs};
-  console.log(title)
-  console.log(albumName)
+  let title = "";
+  if(!isSongs){
+  title = songs.length+" songs";
+ }
+
   return (
     <>
-    <Tooltip title="check" placement='top' arrow>
+    <Tooltip title={title} placement='top' arrow>
      <Card sx={{ width: 159, maxHeight: 205, borderRadius: '7px' }}>
       
         <CardMedia
